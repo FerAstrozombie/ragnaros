@@ -1,0 +1,35 @@
+/*agregando estilos al navBar*/
+.colorTexto {
+
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: $espaciado;
+        &:hover {
+
+            color: #F75C03;
+        }
+}
+
+.colorNav {
+
+    background-color: black;
+    text-align: center;
+   
+}
+
+.navbar-toggler {
+    background-color: #F75C03;
+    border-color: $colorNegro;
+}
+
+/*Posicionamiento estatico del navBar de la tienda*/
+.headerTienda {
+    position: sticky;
+    top: 0;
+  }
+
+.zindex {
+
+    z-index: 300;
+}
