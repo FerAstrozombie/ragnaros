@@ -15,7 +15,7 @@ class Producto{
         this.vendido = true;
     }
 }
-const productosLista = [];
+let productosLista = [];
 
 const cargar = async () => {
     const response = await fetch("../productos.json")
@@ -50,7 +50,7 @@ const cargar = async () => {
             
         })
     
-        const carritoIndex = (productoId) => {
+        let carritoIndex = (productoId) => {
     
             const contenedorCarrito = document.getElementById("carrito-contenedor")
         
@@ -58,7 +58,9 @@ const cargar = async () => {
         
                 let producto = productos.find(producto => producto.id == productoId);
                 productosLista.push(producto);
-        
+                localStorage.setItem("producto", JSON.stringify(producto));
+                console.log(producto);
+                
                 producto.cantidad = 1;
         
                 let div = document.createElement("div")
@@ -71,7 +73,19 @@ const cargar = async () => {
                                 `
         
                 contenedorCarrito.appendChild(div);
-                                
+                const botonEliminar = document.getElementById(`eliminar${producto.id}`);
+                botonEliminar.addEventListener("click" , eliminarDelCarrito)
+                function eliminarDelCarrito(productoId) {
+                    const prod = carritoIndex.find((producto) => producto.id == productoId)
+                    let i = carritoIndex.indexOf(prod)
+                    if (i != -1) {
+                        carritoIndex.splice(i, 1)
+                    }
+                    
+                    productosLista()
+                
+                } 
+                
             }
             renderProductosCarrito();
         }
@@ -83,5 +97,4 @@ const cargar = async () => {
     mostrarProductos(productos);
     
 };
-
 cargar();
