@@ -65,7 +65,7 @@ const cargar = async () => {
         
                 let div = document.createElement("div")
                 div.classList.add("productoEnCarrito")
-                div.innerHTML = `<img (src= "${producto.img}") class= "img-fluid tamañoImagenRender" alt="..."> 
+                div.innerHTML = `<img src= ${producto.img} class= "img-fluid tamañoImagenRender" alt="..."> 
                                     <p class= "carritoParrafo">${producto.nombre}</p>
                                     <p class="carritoParrafo">Precio: $${producto.precio}</p>
                                     <p class="carritoParrafo" id= "cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
