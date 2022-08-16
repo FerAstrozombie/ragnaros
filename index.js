@@ -25,5 +25,10 @@ let botonCesion = document.getElementById("modificadorBoton2");
 botonCesion.addEventListener("click", () => sessionStorage.clear());
 botonCesion.addEventListener("click", () => nombre.remove())
 
+let botonArriba = document.getElementById("botonArriba")
+botonArriba.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+
 
 
