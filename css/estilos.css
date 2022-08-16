@@ -78,7 +78,6 @@
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
-  border: #F75C03 solid 3px;
   border-radius: 20px; }
 
 .botonCerrar {
@@ -139,9 +138,10 @@
   border-color: black; }
 
 /*Posicionamiento estatico del navBar de la tienda*/
-.headerTienda {
+header {
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 20000; }
 
 .zindex {
   z-index: 300; }
@@ -223,6 +223,23 @@ body {
 
 .mensajeBinvenida {
   color: #F75C03;
+  margin-top: 20px; }
+
+#modificadorBoton2 {
+  border: 1px solid #FFC800;
+  /*anchura, estilo y color borde*/
+  padding: 3px;
+  /*espacio alrededor texto*/
+  background-color: #FFC800;
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: none;
+  /*decoración texto*/
+  text-transform: uppercase;
+  /*capitalización texto*/
+  border-radius: 50px;
+  text-align: center;
   margin-top: 10px; }
 
 /* orden de los iconos del footer */

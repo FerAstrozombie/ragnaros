@@ -10,6 +10,7 @@
     <title>Ragnaros remera - Tienda</title>
     <link rel="shortcut icon" href="../imagenes/SON GOKU2.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/987804ddc5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- link a boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -21,7 +22,7 @@
 
 <body class="bodyEstilo">
 
-    <header class="headerTienda zindex">
+    <header>
 
         <!-- Contenedor navbar -->
         <nav class="navbar navbar-expand-lg colorNav">
@@ -29,22 +30,22 @@
                 <a class="navbar-brand" href="../index.html">
                     <img class="logo rounded-circle" src="../imagenes/logo.png" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>                
-                </div>
+                </button>
+                <button id="modificadorBoton2">Cerrar cesion</button>
+                <div id="nombre"></div>        
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <button class="nav-link text body" id="open" href="#">Carrito <i class="fa-solid fa-cart-shopping"></i> <span id="contador-carrito">0</span></button>
-                        <a class="nav-link colorTexto" aria-current="page" href="../index.html">Inicio</a>
-                        <a class="nav-link colorTexto" href="#">Tienda</a>
-                        <a class="nav-link colorTexto" href="../pages/sobreNosotros.html">Sobre nosotros</a>
-                        <a class="nav-link colorTexto" href="#">Galeria</a>
-                        <a class="nav-link colorTexto" href="../pages/contacto.html">Contacto</a>
+                        <div class="navbar-nav ms-auto">
+                            <button class="nav-link text body" id="open" href="#"><i class="fa-solid fa-cart-shopping"></i> <span id="contador-carrito">0</span></button>
+                            <a class="nav-link colorTexto" aria-current="page" href="../index.html">Inicio</a>
+                            <a class="nav-link colorTexto" href="#">Tienda</a>
+                            <a class="nav-link colorTexto" href="../pages/sobreNosotros.html">Conocenos</a>
+                            <a class="nav-link colorTexto" href="#">Galeria</a>
+                            <a class="nav-link colorTexto" href="../pages/contacto.html">Contacto</a>
+                        </div>
                     </div>
-                </div>
             </div>
         </nav>
         
@@ -61,6 +62,7 @@
                 <div class="botoneraCarrito">
                     <h3 class="carritoPrincipal">Carrito</h3>
                     <button class="botonCerrar" id="cerrar">Cerrar</button>
+                    <button class= "botonCerrar" id="botonVaciar">Vaciar</button>
                 </div>
                 <div id="carrito-contenedor"></div>
             </div>
@@ -109,8 +111,11 @@
     <script>
         AOS.init();
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../index.js"></script>
     <script src="../app.js" type="module"></script>
-    <script src="../modal.js" type="module"></script>    
+    <script src="../modal.js" type="module"></script>  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>  
     <!-- script de boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">

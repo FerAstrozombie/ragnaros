@@ -1,20 +1,27 @@
 //Funcion para validar formulario de contacto
 function validarFormulario(e) {
+
     e.preventDefault();
-    e.target.children[0].value.includes("@") ? alert("Nombre ingresado incorrecto") : alert("Nombre ingresado correcto"); 
-    e.target.children[1].value.includes("@") ? alert("Apellido ingresado incorrecto") : alert("Apellido ingresado correcto");
-    e.target.children[3].value.includes(".") ? alert("Email ingresado incorrecto") : alert("Email ingresado correcto");
-    
-
-
-    /* if(e.target.children[0].value.includes("@")){
-        alert("Nombre ingresado incorrecto")
+    if(e.target.children[0].value.includes("@")){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Nombre ingresado incorrecto',
+        })        
         e.target.children[0].value = " ";
     }else if(e.target.children[1].value.includes("@")){
-        alert("Apellido ingresado incorrecto")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Apellido ingresado incorrecto',
+        })
         e.target.children[1].value = " ";
     }else if(!e.target.children[2].value.includes("@")){
-        alert("Email ingresado incorrecto")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Email ingresado incorrecto',
+        })
         e.target.children[2].value = " ";
     }else {         
         let padre = document.getElementById("correo")
@@ -23,7 +30,7 @@ function validarFormulario(e) {
         mensaje.className = "correcto";
         padre.innerHTML = ""; //evita que al apretar el boton aparezcan mas de un mensaje
         padre.append(mensaje)
-        }  */   
+        }  
 }
 //Traigo el formulario del html
 let formulario = document.getElementById("formulario");

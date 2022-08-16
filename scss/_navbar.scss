@@ -15,7 +15,7 @@
 
     background-color: black;
     text-align: center;
-   
+
 }
 
 .navbar-toggler {
@@ -24,10 +24,11 @@
 }
 
 /*Posicionamiento estatico del navBar de la tienda*/
-.headerTienda {
+header {
     position: sticky;
     top: 0;
-  }
+    z-index: 20000;
+}
 
 .zindex {
 

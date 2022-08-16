@@ -1,7 +1,7 @@
 let usuario;
 let usuarioStorage = sessionStorage.getItem("usuario");
 
-//Validamos eñ usuario
+//Validamos el usuario
 if (usuarioStorage) {
     let usuario = usuarioStorage;
     let padre = document.getElementById("nombre")
