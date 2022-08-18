@@ -159,3 +159,7 @@ const cargar = async () => {
     
 };
 cargar();
+
+function agregarAlCarrito () {
+
+}
